@@ -11,10 +11,10 @@ def index(request):
     else:
         form = ContactForm()
 
-    contex = {
+    context = {
         "form": form
     }
-    return render(request, 'home/index.html')
+    return render(request, 'home/index.html', context)
 
 
 def contact(request):
@@ -26,7 +26,7 @@ def contact(request):
     else:
         form = ContactForm()
 
-    contex = {
+    context = {
         "form": form
     }
-    return render(request, "home/contact.html", contex)
+    return render(request, "home/contact.html", context)

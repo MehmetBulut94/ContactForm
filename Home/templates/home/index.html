@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+{% load static %}
 <!--
 	Transitive by TEMPLATED
 	templated.co @templatedco
@@ -14,7 +15,7 @@
 	<body>
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="{% url'home' %}">Transitive <span>by TEMPLATED</span></a></div>
+				<div class="logo"><a href="{% url 'home' %}">Transitive <span>by TEMPLATED</span></a></div>
 				<a href="#menu" class="toggle"><span>Menu</span></a>
 			</header>
 
@@ -161,13 +162,17 @@
 							<div class="content">
 								<h2 class="align-center">Get in Touch</h2>
 								<hr />
-								<form action="{% url'home' %}" method="post">
+								<form action="{% url 'home' %}" method="post">
+									{% csrf_token %}
 									<div class="field half first">
 										<label for="name">Name</label>
+										{{% form.name %}}
 										<input name="name" id="name" type="text" placeholder="Name">
 									</div>
+
 									<div class="field half">
 										<label for="email">Email</label>
+										{{% form.email %}}
 										<input name="email" id="email" type="email" placeholder="Email">
 									</div>
 									<div class="field">
@@ -184,6 +189,7 @@
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
+										{{% form.message %}}
 										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions align-center">
