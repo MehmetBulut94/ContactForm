@@ -14,7 +14,7 @@
 	<body>
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<div class="logo"><a href="{% url'home' %}">Transitive <span>by TEMPLATED</span></a></div>
 				<a href="#menu" class="toggle"><span>Menu</span></a>
 			</header>
 
@@ -77,6 +77,7 @@
 								<li><a href="#" class="button alt">Learn More</a></li>
 							</ul>
 						</div>
+
 						<div>
 							<header>
 								<h3>Aliquam Nulla</h3>
@@ -160,7 +161,7 @@
 							<div class="content">
 								<h2 class="align-center">Get in Touch</h2>
 								<hr />
-								<form action="#" method="post">
+								<form action="{% url'home' %}" method="post">
 									<div class="field half first">
 										<label for="name">Name</label>
 										<input name="name" id="name" type="text" placeholder="Name">
