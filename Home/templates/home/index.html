@@ -166,12 +166,12 @@
 									{% csrf_token %}
 									<div class="field half first">
 										<label for="name">Name</label>
-										{{% form.name %}}
+										{{ form.name }}
 										<input name="name" id="name" type="text" placeholder="Name">
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										{{% form.email %}}
+										{{ form.email }}
 										<input name="email" id="email" type="email" placeholder="Email">
 									</div>
 									<div class="field">
@@ -188,7 +188,7 @@
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										{{% form.message %}}
+										{{ form.message }}
 										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions align-center">
