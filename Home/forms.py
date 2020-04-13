@@ -9,6 +9,6 @@ class ContactForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={"placeholder": "İsim"}),
             "email": forms.EmailInput(attrs={"placeholder": "Email adresiniz"}),
-            "message": forms.Textarea(attrs={"placeholder": "Mesajınız"}),
+            "message": forms.Textarea(attrs={"placeholder": "Mesajınız", 'rows': 6}),
 
         }
